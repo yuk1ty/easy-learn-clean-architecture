@@ -6,7 +6,7 @@ import (
 )
 
 type UserUseCase struct {
-	userRepository repository.UserRepository // FIXME ← why the namespace to be user2?
+	userRepository repository.UserRepository
 }
 
 func (u *UserUseCase) AllUsers() (*entity.Users, error) {

@@ -1,12 +1,12 @@
-package user
+package vo
 
-type Name struct {
+type UserName struct {
 	Value string
 }
 
-func ValidateWith(name string) (*Name, error) {
+func NewUserName(name string) (*UserName, error) {
 	if len(name) > 15 {
 		return nil, nil // TODO return error
 	}
-	return &Name{Value: name}, nil
+	return &UserName{Value: name}, nil
 }

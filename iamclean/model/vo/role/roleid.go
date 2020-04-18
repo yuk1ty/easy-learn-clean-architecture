@@ -1,9 +1,9 @@
-package role
+package vo
 
-type Id struct {
+type RoleId struct {
 	Value string
 }
 
-func NewId() *Id {
-	return &Id{Value:"uuid"} // TODO
+func NewRoleId() *RoleId {
+	return &RoleId{Value: "uuid"} // TODO
 }

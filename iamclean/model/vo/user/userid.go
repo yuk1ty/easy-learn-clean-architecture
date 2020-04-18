@@ -1,9 +1,9 @@
-package user
+package vo
 
-type Id struct {
+type UserId struct {
 	Value string
 }
 
-func NewId() *Id {
-	return &Id{Value:"uuid"} // TODO
+func NewUserId() *UserId {
+	return &UserId{Value: "uuid"} // TODO
 }

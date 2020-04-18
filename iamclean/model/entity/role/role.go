@@ -3,7 +3,7 @@ package entity
 import "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/vo/role"
 
 type Role struct {
-	Id *role.Id
+	Id *role.RoleId
 	Name *role.Name
 	IsAdmin bool
 }
@@ -15,7 +15,7 @@ func NewRole(name string, isAdmin bool) (*Role, error) {
 	}
 
 	return &Role{
-		Id:      role.NewId(),
+		Id:      role.NewRoleId(),
 		Name:    roleName,
 		IsAdmin: isAdmin,
 	}, nil
