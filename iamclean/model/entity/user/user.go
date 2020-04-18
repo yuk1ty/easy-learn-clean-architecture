@@ -1,4 +1,4 @@
-package user
+package entity
 
 import (
 	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/role"
@@ -8,10 +8,10 @@ import (
 type User struct {
 	Id    *user.Id
 	Name  *user.Name
-	Roles []role.Role
+	Roles []entity.Role
 }
 
-func NewUser(name string, roles []role.Role) (*User, error) {
+func NewUser(name string, roles []entity.Role) (*User, error) {
 	userName, err := user.ValidateWith(name)
 	if err != nil {
 		return nil, err

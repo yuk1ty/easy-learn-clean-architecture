@@ -1,4 +1,4 @@
-package role
+package entity
 
 import "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/vo/role"
 

@@ -1,8 +1,8 @@
-package user
+package response
 
 import (
-	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/role"
-	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/user"
+	role "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/role"
+	user "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/user"
 )
 
 type UserJson struct {
