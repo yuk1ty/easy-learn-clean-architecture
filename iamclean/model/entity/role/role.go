@@ -3,8 +3,8 @@ package entity
 import "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/vo/role"
 
 type Role struct {
-	Id *role.RoleId
-	Name *role.Name
+	Id      *role.RoleId
+	Name    *role.Name
 	IsAdmin bool
 }
 
