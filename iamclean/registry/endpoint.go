@@ -1,23 +1,20 @@
 package registry
 
 import (
-	mysql "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/mysql/user"
-	userrepository "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/repository/user"
 	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/web/api"
-	userusecase "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/usecase"
 )
 
-type EndpointRegistry struct{}
+type EndpointRegistry struct {
+	useCaseRegistry UseCaseRegistry
+}
 
 func NewEndpointRegistry() EndpointRegistry {
-	return EndpointRegistry{}
+	return EndpointRegistry{useCaseRegistry: NewUseCaseRegistry()}
 }
 
 func (r EndpointRegistry) UserFilterListEndpoint() api.UserListFilterEndpoint {
 	// TODO get from registries
-	userDao := mysql.NewUserDao()
-	userRepository := userrepository.NewUserRepository(userDao)
-	userUseCase := userusecase.NewUserUsecase(userRepository)
+	userUseCase := r.useCaseRegistry.UserUseCase()
 	endpoint := api.NewUserListFilterEndpoint(userUseCase)
 	return endpoint
 }
