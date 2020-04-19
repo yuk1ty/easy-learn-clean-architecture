@@ -2,23 +2,23 @@ package entity
 
 import (
 	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/role"
-	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/vo/user"
+	vo "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/vo/user"
 )
 
 type User struct {
-	Id    *user.Id
-	Name  *user.Name
+	Id    *vo.UserId
+	Name  *vo.UserName
 	Roles []entity.Role
 }
 
 func NewUser(name string, roles []entity.Role) (*User, error) {
-	userName, err := user.ValidateWith(name)
+	userName, err := vo.NewUserName(name)
 	if err != nil {
 		return nil, err
 	}
 
 	return &User{
-		Id:    user.NewId(),
+		Id:    vo.NewUserId(),
 		Name:  userName,
 		Roles: roles,
 	}, nil

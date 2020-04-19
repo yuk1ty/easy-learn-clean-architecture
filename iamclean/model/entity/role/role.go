@@ -1,21 +1,21 @@
 package entity
 
-import "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/vo/role"
+import vo "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/vo/role"
 
 type Role struct {
-	Id      *role.RoleId
-	Name    *role.Name
+	Id      *vo.RoleId
+	Name    *vo.RoleName
 	IsAdmin bool
 }
 
 func NewRole(name string, isAdmin bool) (*Role, error) {
-	roleName, err := role.ValidateWith(name)
+	roleName, err := vo.NewRoleName(name)
 	if err != nil {
 		return nil, err
 	}
 
 	return &Role{
-		Id:      role.NewRoleId(),
+		Id:      vo.NewRoleId(),
 		Name:    roleName,
 		IsAdmin: isAdmin,
 	}, nil
