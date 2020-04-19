@@ -9,6 +9,10 @@ type UserUseCase struct {
 	userRepository repository.UserRepository
 }
 
-func (u *UserUseCase) AllUsers() (*entity.Users, error) {
+func NewUserUsecase(userRepository repository.UserRepository) UserUseCase {
+	return UserUseCase{userRepository: userRepository}
+}
+
+func (u UserUseCase) AllUsers() (*entity.Users, error) {
 	return u.userRepository.FindAll()
 }

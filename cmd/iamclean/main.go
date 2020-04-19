@@ -2,13 +2,13 @@ package main
 
 import (
 	"github.com/labstack/echo/v4"
-	"net/http"
+	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/web/api"
+	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/registry"
 )
 
 func main() {
 	e := echo.New()
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+	reg := registry.NewEndpointRegistry()
+	api.Routing(e, reg)
 	e.Logger.Fatal(e.Start(":1323"))
 }
