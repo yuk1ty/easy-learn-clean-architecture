@@ -7,7 +7,7 @@ type UseCaseRegistry struct {
 }
 
 func NewUseCaseRegistry() UseCaseRegistry {
-	return UseCaseRegistry{repositoryRegistry: RepositoryRegistry{}}
+	return UseCaseRegistry{repositoryRegistry: NewRepositoryRegistry()}
 }
 
 func (r UseCaseRegistry) UserUseCase() userusecase.UserUseCase {
