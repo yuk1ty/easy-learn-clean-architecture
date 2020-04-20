@@ -3,7 +3,7 @@ package registry
 import (
 	repository "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/repository/user"
 )
-import infra "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/repository/user"
+import infra "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/infra/repository/user"
 
 type RepositoryRegistry struct {
 	mysqlDaoRegistry MySqlDaoRegistry

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/mysql"
-	mysqluser "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/mysql/user"
+	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/infra/mysql"
+	mysqluser "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/infra/mysql/user"
 	"log"
 )
 

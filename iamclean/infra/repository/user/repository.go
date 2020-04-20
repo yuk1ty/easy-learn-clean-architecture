@@ -1,7 +1,7 @@
 package repository
 
 import (
-	mysql "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/mysql/user"
+	mysql "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/infra/mysql/user"
 	entity "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/user"
 	repository "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/repository/user"
 )

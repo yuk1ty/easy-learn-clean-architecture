@@ -2,8 +2,8 @@ package registry
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/mysql"
-	userdao "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/infra/mysql/user"
+	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/infra/mysql"
+	userdao "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/infra/mysql/user"
 	"log"
 )
 

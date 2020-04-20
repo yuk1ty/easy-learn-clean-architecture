@@ -2,15 +2,15 @@ package api
 
 import (
 	"github.com/labstack/echo/v4"
-	user "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/usecase"
+	usecase "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/usecase/user"
 	"net/http"
 )
 
 type UserListFilterEndpoint struct {
-	userUseCase user.UserUseCase
+	userUseCase usecase.UserUseCase
 }
 
-func NewUserListFilterEndpoint(userUseCase user.UserUseCase) UserListFilterEndpoint {
+func NewUserListFilterEndpoint(userUseCase usecase.UserUseCase) UserListFilterEndpoint {
 	return UserListFilterEndpoint{userUseCase: userUseCase}
 }
 

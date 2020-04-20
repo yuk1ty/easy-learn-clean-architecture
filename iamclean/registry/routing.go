@@ -1,7 +1,7 @@
 package registry
 
 import (
-	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/adapter/web/api"
+	"github.com/yuk1ty/easy-learn-clean-architecture/iamclean/web/api"
 )
 
 type RoutingRegistry struct {
