@@ -9,3 +9,9 @@ type UserDao struct {
 func NewUserDao(db *gorm.DB) UserDao {
 	return UserDao{db: db}
 }
+
+func (dao UserDao) FindAllUsers() []GormUser {
+	var users []GormUser
+	dao.db.Find(&users)
+	return users
+}

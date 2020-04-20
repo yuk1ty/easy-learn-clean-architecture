@@ -13,3 +13,7 @@ type GormUser struct {
 	CreatedAt time.Time `gorm:"type:datetime(6)"`
 	UpdatedAt time.Time `gorm:"type:datetime(6)"`
 }
+
+func (u GormUser) TableName() string {
+	return "user"
+}
