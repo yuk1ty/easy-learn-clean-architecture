@@ -5,11 +5,11 @@ import (
 	"time"
 )
 
-type GormUser struct {
+type GormRole struct {
 	gorm.Model
-	Id string `gorm:"primary_key"`
+	Id string
 	Name string
-	Roles []GormRole    `gorm:"foreignkey:UserId"`
+	UserId string
 	CreatedAt time.Time `gorm:"type:datetime(6)"`
 	UpdatedAt time.Time `gorm:"type:datetime(6)"`
 }
