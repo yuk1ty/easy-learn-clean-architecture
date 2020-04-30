@@ -15,5 +15,9 @@ func NewUserListFilterEndpoint(userUseCase usecase.UserUseCase) UserListFilterEn
 }
 
 func (u UserListFilterEndpoint) FilterUserList(c echo.Context) error {
-	return c.String(http.StatusOK, "UserList")
+	users, err := u.userUseCase.AllUsers()
+	if err != nil {
+		c.Error(err)
+	}
+	return c.String(http.StatusOK, "UserList") // TODO
 }

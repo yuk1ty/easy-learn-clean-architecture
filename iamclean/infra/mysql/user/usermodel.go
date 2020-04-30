@@ -2,6 +2,7 @@ package mysql
 
 import (
 	"github.com/jinzhu/gorm"
+	entity "github.com/yuk1ty/easy-learn-clean-architecture/iamclean/model/entity/user"
 	"time"
 )
 
@@ -16,4 +17,8 @@ type GormUser struct {
 
 func (u GormUser) TableName() string {
 	return "user"
+}
+
+func (u GormUser) ToUser() (*entity.User, error) {
+	return entity.NewUser(u.Name, u.Roles) // TODO roles がめんどくさくて変えてないけど。
 }

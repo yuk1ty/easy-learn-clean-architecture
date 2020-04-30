@@ -15,5 +15,7 @@ func NewUserRepository(dao mysql.UserDao) repository.UserRepository {
 }
 
 func (u *UserRepositoryImpl) FindAll() (*entity.Users, error) {
+	var gormUsers []mysql.GormUser = u.dao.FindAllUsers()
+	// Gorm User から User に変換する処理を噛ませる
 	return nil, nil
 }

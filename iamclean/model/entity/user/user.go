@@ -23,3 +23,8 @@ func NewUser(name string, roles []entity.Role) (*User, error) {
 		Roles: roles,
 	}, nil
 }
+
+func (u *User) AddRole(roles []entity.Role) *User {
+	u.Roles = roles
+	return u
+}
